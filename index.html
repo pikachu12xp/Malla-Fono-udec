@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Interactiva - Fonoaudiología UDEC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Malla Interactiva - Fonoaudiología UDEC</h1>
+
+<div class="grid">
+  <div class="semestre">SEM I</div>
+  <div class="ramo" onclick="toggle(this)">Lingüística General</div>
+  <div class="ramo" onclick="toggle(this)">Introducción a la Fonoaudiología</div>
+  <div class="ramo" onclick="toggle(this)">Física General</div>
+  <div class="ramo" onclick="toggle(this)">Anatomía General</div>
+  <div class="ramo" onclick="toggle(this)">Biología Celular Básica</div>
+  <div class="ramo" onclick="toggle(this)">Psicología Social</div>
+  <div class="ramo" onclick="toggle(this)">Complementario</div>
+
+  <div class="semestre">SEM II</div>
+  <div class="ramo" onclick="toggle(this)">Fonética y Fonología I</div>
+  <div class="ramo" onclick="toggle(this)">Morfosintaxis I</div>
+  <div class="ramo" onclick="toggle(this)">Acústica Física</div>
+  <div class="ramo" onclick="toggle(this)">Anatomía de Órganos Fonoarticulatorios</div>
+  <div class="ramo" onclick="toggle(this)">Fisiología Humana</div>
+  <div class="ramo" onclick="toggle(this)">Psicología Evolutiva</div>
+  <div class="ramo" onclick="toggle(this)">Bioética y Profesionalismo</div>
+
+  <div class="semestre">SEM III</div>
+  <div class="ramo" onclick="toggle(this)">Fonética y Fonología II</div>
+  <div class="ramo" onclick="toggle(this)">Morfosintaxis II</div>
+  <div class="ramo" onclick="toggle(this)">Semántica y Pragmática</div>
+  <div class="ramo" onclick="toggle(this)">Sistema Estomatognático-Fonoaudiología</div>
+  <div class="ramo" onclick="toggle(this)">Fisiopatología Humana</div>
+  <div class="ramo" onclick="toggle(this)">Neuroanatomía</div>
+  <div class="ramo" onclick="toggle(this)">Psicolingüística</div>
+
+  <div class="semestre">SEM IV</div>
+  <div class="ramo" onclick="toggle(this)">Análisis Acústico de la Fonoarticulación</div>
+  <div class="ramo" onclick="toggle(this)">Taller de Comunicación Oral y Corporal</div>
+  <div class="ramo" onclick="toggle(this)">Psicolingüística Evolutiva</div>
+  <div class="ramo" onclick="toggle(this)">Análisis del Discurso Oral</div>
+  <div class="ramo" onclick="toggle(this)">Neurología y Fonoaudiología</div>
+  <div class="ramo" onclick="toggle(this)">Neurolingüística</div>
+  <div class="ramo" onclick="toggle(this)">Taller Integrador de Fonoaudiología I</div>
+
+  <div class="semestre">SEM V</div>
+  <div class="ramo" onclick="toggle(this)">Lenguaje y Habla Infanto-Juvenil I</div>
+  <div class="ramo" onclick="toggle(this)">Lenguaje y Habla en Adulto I</div>
+  <div class="ramo" onclick="toggle(this)">Voz I</div>
+  <div class="ramo" onclick="toggle(this)">Funciones Orofaciales I</div>
+  <div class="ramo" onclick="toggle(this)">Salud Pública y Fonoaudiología</div>
+  <div class="ramo" onclick="toggle(this)">Sistema Educacional Chileno y Fonoaudiología</div>
+  <div class="ramo" onclick="toggle(this)">Inglés Comunicativo I Nivel Principiante</div>
+
+  <div class="semestre">SEM VI</div>
+  <div class="ramo" onclick="toggle(this)">Lenguaje y Habla Infanto-Juvenil II</div>
+  <div class="ramo" onclick="toggle(this)">Lenguaje y Habla en Adulto II</div>
+  <div class="ramo" onclick="toggle(this)">Voz II</div>
+  <div class="ramo" onclick="toggle(this)">Funciones Orofaciales II</div>
+  <div class="ramo" onclick="toggle(this)">Sistema Auditivo y Vestibular I</div>
+  <div class="ramo" onclick="toggle(this)">Metodología de la Investigación</div>
+  <div class="ramo" onclick="toggle(this)">Inglés Comunicativo II Nivel Elemental</div>
+
+  <div class="semestre">SEM VII</div>
+  <div class="ramo" onclick="toggle(this)">Lenguaje y Habla Infanto-Juvenil III</div>
+  <div class="ramo" onclick="toggle(this)">Lenguaje y Habla en Adulto III</div>
+  <div class="ramo" onclick="toggle(this)">Voz III</div>
+  <div class="ramo" onclick="toggle(this)">Funciones Orofaciales III</div>
+  <div class="ramo" onclick="toggle(this)">Sistema Auditivo y Vestibular II</div>
+  <div class="ramo" onclick="toggle(this)">Seminario de Investigación</div>
+
+  <div class="semestre">SEM VIII</div>
+  <div class="ramo" onclick="toggle(this)">Primeros Auxilios</div>
+  <div class="ramo" onclick="toggle(this)">Sistema Auditivo y Vestibular III</div>
+  <div class="ramo" onclick="toggle(this)">Proyecto de Innovación y Emprendimiento</div>
+  <div class="ramo" onclick="toggle(this)">Taller Integrador de Fonoaudiología II</div>
+  <div class="ramo" onclick="toggle(this)">Electivo</div>
+  <div class="ramo" onclick="toggle(this)">Electivo</div>
+  <div class="ramo" onclick="toggle(this)">Electivo</div>
+
+  <div class="semestre">SEM IX</div>
+  <div class="ramo" onclick="toggle(this)">Internado en Fonoaudiología</div>
+
+  <div class="semestre">SEM X</div>
+  <div class="ramo" onclick="toggle(this)">Internado en Fonoaudiología</div>
+</div>
+
+<script>
+  function toggle(elem) {
+    elem.classList.toggle("aprobado");
+    localStorage.setItem(elem.textContent, elem.classList.contains("aprobado"));
+  }
+
+  window.onload = function() {
+    document.querySelectorAll(".ramo").forEach(elem => {
+      if (localStorage.getItem(elem.textContent) === "true") {
+        elem.classList.add("aprobado");
+      }
+    });
+  };
+</script>
+
+</body>
+</html>
